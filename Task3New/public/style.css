@@ -30,8 +30,8 @@ a
 
 #customerOrdersPanel
 {
-    width: 700px;
-    height: 700px;
+    width: 70%;
+    height: 400px;
     border: 3px black  solid;
     float: right;
     display: none;
