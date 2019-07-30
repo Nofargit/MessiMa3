@@ -16,13 +16,13 @@ function showCustomerOrders(data)
     customerOrdersDiv = document.getElementById('customerOrdersPanel');
     customerOrdersDiv.style.display='block';
 
+    let newText = "";
 
+    //customerOrdersDiv.innerHTML='';
 
-    customerOrdersDiv.innerHTML='';
-
-    for(i=0; data.length; i++)
+    for(i=0; i<data.length; i++)
     {
-         customerOrdersDiv.innerHTML += `
+         newText += `
           <br>
           <a onclick="event.preventDefault() , getOrderDetails(${data[i].OrderID})" href='#'> <u> OrderID: </u>${JSON.stringify(data[i].OrderID)} </a>
           <span><u> CustomerID: </u> ${JSON.stringify(data[i].CustomerID)}  </span><br>
@@ -41,8 +41,10 @@ function showCustomerOrders(data)
           <br>
           <br> 
           ` 
-    
         }   
+
+        customerOrdersDiv.innerHTML = newText
+
     return customerOrdersDiv
 }   
 
