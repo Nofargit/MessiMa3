@@ -18,8 +18,6 @@ function showCustomerOrders(data)
 
     let newText = "";
 
-    //customerOrdersDiv.innerHTML='';
-
     for(i=0; i<data.length; i++)
     {
          newText += `
